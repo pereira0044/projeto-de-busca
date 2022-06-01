@@ -1,0 +1,34 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img routerLink="/" width="40" alt="Logo App" src="/assets/icons/icon-512x512.png" width="50px" />
+  <span>
+    <h2>App de busca</h2>
+  </span>
+</div>
+
+<main>
+
+  <div *ngIf="hideButtons()" class="grid justify-content-center mt-3">
+    <div class="col-12 md:col-6 lg:col-3">
+      <p-button styleClass="w-full h-11rem" label="Busca CEP" routerLink="/cep"></p-button>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <p-button styleClass="p-button-secondary w-full h-11rem" label="Busca CNPJ" routerLink="/cnpj"></p-button>
+    </div>
+  </div>
+
+  <!-- <div class="grid">
+    <div class="col-6">
+      <p-button styleClass="w-full" label="Busca CEP" routerLink="/cep"></p-button>
+    </div>
+    <div class="col-6">
+      <p-button styleClass="p-button-secondary w-full" label="Busca CNPJ" routerLink="/cnpj"></p-button>
+    </div>
+</div> -->
+</main>
+
+<router-outlet></router-outlet>
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="default" color="#fff" type="ball-atom" [fullScreen]="true">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>
